@@ -21,12 +21,27 @@ public class BusAttributes {
 		Capacity = cap;				//mutator
 	}
 	
-	public boolean isAC() {		//accessor method
+	public boolean getAC() {		//accessor method
 		return AC;
 	}
 	
-	public boolean setAC() {		//mutator
-		return AC;
+	public void setAC(boolean value) {		//mutator
+		AC = value;
+	}
+	
+	public int getBusID() {		//accessor method
+		return BusID;
+	}
+	
+	public void setBusID(int BusID) {		//mutator 
+		this.BusID = BusID;
+	}
+	
+	
+	
+	
+	public void DisplayBus() {
+		System.out.println("Bus ID = " + BusID + "Is AC = " + AC + "Total Capacity = " + Capacity);
 	}
 	
 }
