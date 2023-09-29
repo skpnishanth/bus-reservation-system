@@ -23,7 +23,7 @@ public class MainBooking {
 
 		int i = 1;
 		while(i==1) {
-			System.out.println("\nEnter 1 to book and 2 to exit: ");
+			System.out.println("Enter 1 to book and 2 to exit:");		
 			i = scan.nextInt();
 			if(i==1) {
 				TravellersDetail travellers = new TravellersDetail();
@@ -31,12 +31,13 @@ public class MainBooking {
 					List.add(travellers);
 					System.out.println("Booked Successfully");
 				}
+				else 
+					System.out.println("Bus is Full");
 			}
-			else if(i>1)
-				System.out.println("Thank you");
+
 
 		}
 		scan.close();
-
+		System.out.println("We are done");
 	}
 }

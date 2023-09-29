@@ -14,22 +14,23 @@ public class TravellersDetail {
 	public TravellersDetail() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the passenger Name: ");
-		scan.next();
+		PassengerName =  scan.next();
 
 		System.out.println("Enter the Bus Number: ");
-		scan.nextInt();
+		busNo = scan.nextInt();
 
 		System.out.println("Enter the date in the format dd-mm-yyyy"); //Date will be saved as String. Convert it to date format
 		String DateInput = scan.next();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
 		try {
 			date = dateFormat.parse(DateInput);
 		} catch (ParseException e) {
+			System.out.println("An error occurred while parsing the date");
 			e.printStackTrace();
 		}
 
-		scan.close();
+		//scan.close();
 
 	}
 
